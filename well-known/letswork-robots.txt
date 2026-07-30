@@ -1,0 +1,6 @@
+# letswork.io - Main domain
+User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=yes
+Allow: /
+Disallow: /cdn-cgi/
+Sitemap: https://www.letswork.io/sitemap.xml

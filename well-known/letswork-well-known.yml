@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of https://letswork.io
+host: https://letswork.io
+notes: >-
+  Letswork publishes no /.well-known/ discovery documents. Every RFC-defined
+  path probed returned 404. The provider does, however, publish a first-party
+  /llms.txt and a robots.txt carrying an explicit Content-Signal directive, so
+  its agent-facing surface is declared at the site root rather than under
+  /.well-known/. Recorded here as honest negative data.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+root_documents:
+- path: /llms.txt
+  status: 200
+  file: ../llms/letswork-llms.txt
+  content_type: text/plain
+- path: /robots.txt
+  status: 200
+  file: letswork-robots.txt
+  content_type: text/plain
+content_signal:
+  declared: true
+  source: https://letswork.io/robots.txt
+  directive: 'Content-Signal: search=yes,ai-input=yes,ai-train=yes'
+  search: yes
+  ai_input: yes
+  ai_train: yes
+  interpretation: >-
+    Letswork explicitly permits search indexing, AI input (retrieval/grounding)
+    and AI training use of its public content via the Cloudflare Content-Signal
+    policy expressed in robots.txt.
