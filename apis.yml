@@ -12,6 +12,17 @@ description: >-
   add a shared credit pool, admin dashboard and usage analytics for hybrid companies.
   Letswork publishes no public developer API or developer portal; it does publish a
   first-party llms.txt canonical fact set for AI assistants.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
