@@ -53,7 +53,7 @@ tags:
 - Workspace
 - Booking
 - Marketplace
-- Real-Estate
+- Real Estate
 - Productivity
 - Future Of Work
 - Travel
@@ -67,6 +67,7 @@ tags_raw:
 - Productivity
 - Future of Work
 - Travel
+- Real-Estate
 apis: []
 maintainers:
 - FN: Kin Lane
